@@ -30,7 +30,7 @@ if (program.input) pathInput = program.input;
 else return console.log( '-i, --input : undefined' );
 
 if (program.output) pathOutput = program.output;
-else return console.log( '-i, --output : undefined' );
+else return console.log( '-o, --output : undefined' );
 
 init();
 
