@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Knudian",
+  "author": "Knudian, forked by sign0",
   "license": "MIT",
   "dependencies": {
     "colors": "^1.1.2",
