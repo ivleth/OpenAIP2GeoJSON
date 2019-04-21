@@ -10,13 +10,14 @@
   "license": "MIT",
   "dependencies": {
     "colors": "^1.1.2",
+    "commander": "^2.20.0",
     "fs": "0.0.1-security",
     "geojson": "^0.4.0",
     "q": "^1.4.1",
     "xml2js": "^0.4.17"
   },
   "repository": {
-      "type": "git",
-      "url": "git@github.com:Knudian/OpenAIP2GeoJSON.git"
+    "type": "git",
+    "url": "git@github.com:Knudian/OpenAIP2GeoJSON.git"
   }
 }

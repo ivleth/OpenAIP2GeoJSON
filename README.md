@@ -2,6 +2,12 @@
 
 This little script look for files from [OpenAIP](http://www.openaip.net) in the folder ```input```, and transform those into GeoJSON files.
 
+## FORK
+
+```bash
+$ node index.js --input PATH/TO/DIRECTORY/OF/AIP --output PATH/TO/DIRECTORY/OF/GEOJSON
+```
+
 ## TODO
 - [x] parser for .aip files
 - [ ] parser for .cup files

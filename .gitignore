@@ -7,3 +7,5 @@ npm-debug.log
 # ignore input and output folder contents.
 output/*
 input/*
+
+yarn.lock

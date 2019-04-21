@@ -1,9 +1,12 @@
+
 // Import dependencies
 var xml2js		= require('xml2js'),
 	fs			= require('fs'),
 	colors		= require('colors/safe'),
 	Q			= require('q'),
 	GeoJSON		= require('geojson');
+    program		= require('commander');
+
 // Declare global vars
 var airports	= [],
 	runways		= [],
@@ -16,6 +19,18 @@ var airports	= [],
     polygons    = [],
     fileTypes   = ['airports', 'airspace', 'hotspot', 'navaid'],
     geoBlocks   = ['airports', 'airspaces', 'hotspots', 'navaids', 'runways'];
+
+program
+    .version("1.0.0")
+    .option("-i, --input [value]", "path to input file")
+    .option("-o, --output [value]", "path to output file")
+    .parse(process.argv);
+
+if (program.input) pathInput = program.input;
+else return console.log( '-i, --input : undefined' );
+
+if (program.output) pathOutput = program.output;
+else return console.log( '-i, --output : undefined' );
 
 init();
 
@@ -278,7 +293,7 @@ function startProcess(){
 
 function createGeoFile(data, block){
     var geoData = GeoJSON.parse(data, ( block !== 'airspaces') ? {Point:['latitude','longitude']} : {'Polygon':'geometry'});
-    fs.writeFile('./output/'+block+'.geojson', JSON.stringify(geoData), (err) => {
+    fs.writeFile(pathOutput+block+'.geojson', JSON.stringify(geoData), (err) => {
         if (err) throw err;
         console.log(colors.green(">>> Saved geojson file for "+ block));
     });
