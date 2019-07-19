@@ -250,9 +250,9 @@ function getFileData(item, block){
     var ext = item.slice(-3);
     if( ext === 'aip'){
         fs.readFile(file, 'utf8', function(err, data){
-            if(err){ return console.err(err); }
+            if(err){ return console.error(err); }
             xml2js.parseString(data, function(err, result){
-                if(err) { return console.err(err);}
+                if(err) { return console.error(err);}
                 return analyseDatas(result, block);
             });
         });
