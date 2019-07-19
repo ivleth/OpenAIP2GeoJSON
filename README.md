@@ -12,7 +12,7 @@ node index.js --input PATH/TO/DIRECTORY/OF/AIP/FILES --output PATH/TO/DIRECTORY/
 ## Example
 
 ```bash
-node index.js --input example_files/input --output example_files/output
+node index.js --input example_files/input/ --output example_files/output/
 ```
 
 ## Data structures
