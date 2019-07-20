@@ -51,7 +51,7 @@ function init(){
 }
 
 function analyseDatas(data, block){
-	console.log(colors.yellow('>>> Staring analysis of ' + block));
+	console.log(colors.yellow('>>> Starting analysis of ' + block));
 	switch (block) {
 		case 'airports'	: doAirports(data, block); break;
 		case 'airspace'	: doAirspaces(data, block); break;
